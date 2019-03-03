@@ -1,0 +1,28 @@
+<div class="roman-ruby">
+    <form>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="basic-addon1">Integer</span>
+			</div>
+			<input name="input" type="text" id="input" class="form-control" placeholder="Enter between 1 to 3999" aria-label="Username" aria-describedby="basic-addon1">
+		</div>
+    <br/>
+    <input type="submit" class="btn btn-danger" onclick="document.getElementById('input').submit();" value="Submit"></input>
+    </form>
+</div>
+<% if @roman %>
+		<h2> Integer: <%= "#{params[:input]}" %>
+    <h2> Roman: <%= "#{@roman}" %> </h2>
+<% else %>
+    <h1> <%= "#{@message}" %></h1>
+<% end %>
+
+<script>
+	function submitFrmAjax(){
+    $.ajax({
+    	//Your ajax code here to submit from via AJAX. refer jquery site . I gave sample eg.
+			url : "/show",
+			data : $("form").serialize()
+    });
+  }
+</script>
