@@ -1,7 +1,9 @@
-
 # Archive User from app
 class FindRoman
   attr_reader :integer
+  class ValidityError < StandardError
+    MESSAGE = 'Please input between 1 to 3999.'
+  end
 
   ROMAN_NUMBERS = {
     1000 => "M",  
@@ -25,8 +27,8 @@ class FindRoman
 
   def call
     n = integer
+    raise ValidityError, ValidityError::MESSAGE if !(1..3999).include?(n)
     roman = ""
-    binding.pry
     ROMAN_NUMBERS.each do |value, letter|
       roman << letter*(n / value)
       n = n % value
