@@ -17,5 +17,10 @@ The stategy was simple just to iterate over the standard roman numerals and incr
 As long as the values are divisible by the fixed roman numerals integer they are in the loop.
 Biggest challenge for me was to implement this logic to a working app. The code placement. Thus this is just a small effort to fetch roman numerals of given integer.
 
+The main logic is inside `app/service_objects/find_roman.rb` file.
+The spec is inside `app/spec/service_objects/find_roman_spec.rb` file.
+
+Technical Questions and Answers: [https://docs.google.com/document/d/1Y8Zy2uZdBu717DT6E1NkOTJyM-t_rpYxzFL2HbnxR0Y/edit?usp=sharing](https://docs.google.com/document/d/1Y8Zy2uZdBu717DT6E1NkOTJyM-t_rpYxzFL2HbnxR0Y/edit?usp=sharing)
+
 *Ruby 2.3.3
 *Rails 5.1.6.1
